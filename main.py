@@ -33,6 +33,9 @@ tokenizer.fit_on_texts(texts)
 class RequestText(BaseModel):
     text: str
 
+@app.get("/")
+def index():
+    return "Ini adalah API dari Model ML TREC HEHE!"
 
 @app.post("/predict_text")
 def predict_text(req: RequestText):

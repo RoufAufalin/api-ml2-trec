@@ -61,5 +61,5 @@ def predict_text(req: RequestText):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 4000))
-    print(f"Listening to http://127.0.0.1:{port}")
-    uvicorn.run(app, host='127.0.0.1', port=port)
+    print(f"Listening to http://0.0.0.0:{port}")
+    uvicorn.run(app, host='0.0.0.0', port=port)
